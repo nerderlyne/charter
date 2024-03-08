@@ -3,4 +3,19 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+solc_version = "0.8.24"
+evm_version = "shanghai"
+
+via_ir = true
+
+optimizer = true
+optimizer_runs = 9_999_999
+
+[fmt]
+line_length = 100
+
+[rpc_endpoints]
+arbitrum = "${ARBITRUM_RPC}" 
+
+[etherscan]
+arbitrum = {key = "${ARBISCAN_API_KEY}", url = "https://api.arbiscan.io/api" }
